@@ -1,0 +1,16 @@
+# Ignore all target folders recursively
+**/target/
+
+# Optional extras
+**/*.rs.bk
+**/*.log
+**/*.tmp
+
+# IDEs
+**/.vscode/
+**/.idea/
+
+# OS stuff
+.DS_Store
+Thumbs.db
+
