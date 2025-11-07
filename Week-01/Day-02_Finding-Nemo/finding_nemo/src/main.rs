@@ -7,9 +7,8 @@ fn main() {
 }
 
 fn where_is_nemo(sentence: String) -> String {
-    let nemo = "Nemo";
     for (item, word) in sentence.split(' ').enumerate() {
-        if word == nemo {
+        if word == "Nemo" {
             return format!("I found Nemo at {}!", item+1).to_string();
         }
     }
