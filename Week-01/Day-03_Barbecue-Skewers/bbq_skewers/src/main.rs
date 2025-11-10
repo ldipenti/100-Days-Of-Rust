@@ -29,6 +29,15 @@ fn main() {
     }
 }
 
-fn analyze_grill(_grill:[&str; 5]) -> [u8;2] {
-    [0,0]
+fn analyze_grill(grill:[&str; 5]) -> [u8;2] {
+    let mut veg = 0;
+    let mut nonveg = 0;
+    for skewer in grill {
+        if skewer.contains("x") {
+            nonveg += 1;
+        } else if skewer.contains("o") {
+            veg += 1;
+        }
+    }
+    [veg, nonveg]
 }
