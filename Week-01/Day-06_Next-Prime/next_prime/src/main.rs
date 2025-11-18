@@ -9,6 +9,16 @@ fn main() {
             next_prime(*test_case)
         );
     }
+
+    println!("Let's look for the first 100 primes");
+    let mut found_primes = 0;
+    let mut n = 1;
+    while found_primes < 100 {
+        let prime = next_prime(n);
+        println!("Prime #{} is {}", found_primes + 1, prime);
+        n = prime + 1;
+        found_primes += 1;
+    }
 }
 
 fn next_prime(num: u32) -> u32 {
